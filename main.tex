@@ -1,0 +1,76 @@
+% LaTeX template for BME UG planning report (Nov, 2022)
+% designed by Binghuan W Li, inspired by DoC coursework template
+% compiling engine - XuLaTeX
+
+% ============= ADDING PREAMBLES  =============%
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+
+% set main font to Time New Roman, set math font to newtxmath
+\usepackage{fontspec}
+    \setmainfont{Times New Roman}
+\usepackage{newtxmath}
+
+% insertion of graphics
+\usepackage{graphicx}
+\usepackage{float}
+
+% insertion of tables
+\usepackage{tabularx}
+
+% import reference manager
+\usepackage[sorting=none]{biblatex} 
+
+% define Imperial blue
+\usepackage{xcolor}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+
+% write hyperlink color to Imperial blue
+\usepackage{hyperref}
+\hypersetup{colorlinks,
+            breaklinks,
+            urlcolor=linkcolour,
+            linkcolor=linkcolour}
+            
+% ============= END OF PREAMBLES  =============%
+
+% need to manually define the following variables
+\newcommand{\reporttitle}{Title of report}
+\newcommand{\reportauthor}{Your Name}
+\newcommand{\reportsupervisor}{Your Supervisor's Name}
+\newcommand{\cid}{your college-id number}
+\newcommand{\wordcount}{word count}
+
+% write PDF metadata
+\hypersetup{pdftitle={\reporttitle},
+            pdfauthor={\reportauthor}}
+
+% ============= DOCUMENT BEGIN  =============%
+\begin{document}
+
+\include{contents/titlepage}
+
+\tableofcontents
+
+\include{contents/1_Project_Specification.tex}
+
+\include{contents/2_Ethical_Analysis.tex}
+
+\include{contents/3_Literature_Review.tex}
+
+\include{contents/4_Implementation_Plan.tex}
+
+\include{contents/5_Risk_Register.tex}
+
+\include{contents/6_Evaluation.tex}
+
+\include{contents/7_Preliminary_Results.tex}
+
+%======================================================
+% To insert references, consider using biblatex
+%======================================================
+
+
+% =============== DOCUMENT END ===============%
+\end{document}

@@ -1,6 +1,10 @@
-% LaTeX template for BME UG planning report (Nov, 2022)
-% designed by Binghuan W Li, inspired by DoC coursework template
-% compiling engine - XuLaTeX
+% ==============================================
+% LaTeX template for MEng Bioengineering
+% Individual Project Planning Report
+% ==============================================
+% Templete Author: Binghuan W Li (Nov 2022)
+
+% Compilation Engine - XuLaTeX
 
 % ============= ADDING PREAMBLES  =============%
 \documentclass[a4paper, 11pt]{article}
@@ -21,6 +25,10 @@
 
 % import reference manager
 \usepackage[sorting=none]{biblatex} 
+\addbibresource{references.bib} %<== amend when necessary
+
+% use import function for word counting
+\usepackage{import}
 
 % define Imperial blue
 \usepackage{xcolor}
@@ -53,24 +61,25 @@
 
 \tableofcontents
 
-\include{contents/1_Project_Specification.tex}
+\import{contents}{1_Project_Specification.tex}
 
-\include{contents/2_Ethical_Analysis.tex}
+\import{contents}{2_Ethical_Analysis.tex}
 
-\include{contents/3_Literature_Review.tex}
+\import{contents}{3_Literature_Review.tex}
 
-\include{contents/4_Implementation_Plan.tex}
+\import{contents}{4_Implementation_Plan.tex}
 
-\include{contents/5_Risk_Register.tex}
+\import{contents}{5_Risk_Register.tex}
 
-\include{contents/6_Evaluation.tex}
+\import{contents}{6_Evaluation.tex}
 
-\include{contents/7_Preliminary_Results.tex}
+\import{contents}{7_Preliminary_Results.tex}
+
 
 %======================================================
-% To insert references, consider using biblatex
-%======================================================
-
+% To insert references
+\newpage
+\printbibliography
 
 % =============== DOCUMENT END ===============%
 \end{document}

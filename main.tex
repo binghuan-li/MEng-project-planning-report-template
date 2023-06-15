@@ -15,6 +15,7 @@
 \usepackage{fontspec}
     \setmainfont{Times New Roman}
 \usepackage{newtxmath}
+\usepackage{bm}
 
 % insertion of graphics
 \usepackage{graphicx}
@@ -22,6 +23,10 @@
 
 % insertion of tables
 \usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{pifont} % <= import for tick/cross marks
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
 
 % import reference manager
 \usepackage[sorting=none]{biblatex} 
@@ -40,7 +45,13 @@
             breaklinks,
             urlcolor=linkcolour,
             linkcolor=linkcolour}
-            
+
+% disable paragraph indentation
+\setlength\parindent{0pt}
+
+% set line spacing to 1.2
+\linespread{1.2}
+
 % ============= END OF PREAMBLES  =============%
 
 % need to manually define the following variables
